@@ -1,0 +1,12 @@
+{
+  "id": "017",
+  "title": "Data Stream as Disjoint Intervals",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Ordered Set",
+    "Intervals",
+    "Sorting",
+    "Data Stream"
+  ]
+}

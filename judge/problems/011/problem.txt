@@ -1,0 +1,64 @@
+011. Another Stone Crisis
+
+Alice and Bob are playing a game with n stones arranged in a row. Alice moves first.
+
+The value of the i-th stone is a[i].
+
+While there is more than one stone in the row, the current player performs the following operation:
+
+Choose an integer x such that x > 1 and x does not exceed the current number of stones.
+Remove the leftmost x stones from the row.
+Add the sum of the removed stones to the player's score.
+Insert a new stone with value equal to this sum at the left side of the remaining row.
+
+The game ends when exactly one stone remains.
+
+Alice wants to maximize the difference between her score and Bob's score.
+
+Bob wants to minimize the difference between Alice's score and his score.
+
+Assuming that both players play optimally, determine the final value of:
+
+Alice's score - Bob's score.
+
+Input
+
+The first line contains an integer n (2 ≤ n ≤ 10^5).
+
+The second line contains n integers a[1], a[2], ..., a[n] (-10^4 ≤ a[i] ≤ 10^4).
+
+Output
+
+Print a single integer — the value of Alice's score - Bob's score when both players play optimally.
+
+Examples
+Example 1
+
+Input:
+
+5
+-1 2 -3 4 -5
+
+Output:
+
+5
+Example 2
+
+Input:
+
+7
+7 -6 5 10 5 -2 -6
+
+Output:
+
+13
+Example 3
+
+Input:
+
+2
+-10 -12
+
+Output:
+
+-22

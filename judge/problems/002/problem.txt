@@ -1,0 +1,124 @@
+Problem 002 — Modify and Subtract
+
+Problem Statement
+
+A given array A is said to be good if it can be transformed into
+[0, 0, ..., 0] using the following operation any number of times,
+possibly zero:
+
+Choose an index i (1 <= i < N) and subtract 1 from both Ai and Ai+1.
+
+You are given an array A of N integers.
+
+Count the number of indices i (1 <= i <= N) such that there exists a
+valid integer X for which, after changing Ai to X, the resulting array A
+is good.
+
+You may choose X = Ai itself, meaning that the array does not have to
+actually change.
+
+Input Format
+
+The first line contains a single integer T, denoting the number of
+test cases.
+
+Each test case consists of two lines:
+
+The first line contains a single integer N.
+
+The second line contains N space-separated integers
+A1, A2, ..., AN.
+
+Output Format
+
+For each test case, print the number of valid indices i on a separate line.
+
+An index i is valid if there exists an integer X such that after
+replacing Ai with X, the resulting array can be transformed into an
+array of all zeros using the allowed operation.
+
+Constraints
+
+1 <= T <= 10^4
+
+2 <= N <= 2 * 10^5
+
+0 <= Ai <= 10^9
+
+The sum of N over all test cases does not exceed 2 * 10^5.
+
+Examples
+
+Example 1
+
+Input
+
+3
+3
+1 1 1
+5
+3 4 0 4 3
+2
+3 3
+
+Output
+
+3
+1
+2
+
+Explanation
+
+Test Case 1:
+
+For i = 1, change A1 to 0.
+
+The resulting array is:
+
+[0, 1, 1]
+
+This array is good.
+
+For i = 2, change A2 to 2.
+
+The resulting array is:
+
+[1, 2, 1]
+
+This array is good.
+
+For i = 3, change A3 to 0.
+
+The resulting array is:
+
+[1, 1, 0]
+
+This array is good.
+
+Therefore, the answer is 3.
+
+
+Test Case 2:
+
+The only valid index is i = 3.
+
+Change A3 to 2.
+
+The resulting array is:
+
+[3, 4, 2, 4, 3]
+
+This array is good.
+
+Therefore, the answer is 1.
+
+
+Test Case 3:
+
+The array is:
+
+[3, 3]
+
+For both indices, a valid value of X exists.
+
+Therefore, the answer is 2.

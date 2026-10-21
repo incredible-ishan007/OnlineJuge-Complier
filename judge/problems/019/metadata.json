@@ -1,0 +1,10 @@
+{
+    "id": "019",
+    "title": "Probability of Two Boxes Having the Same Number of Distinct Balls",
+    "difficulty": "Hard",
+    "tags": [
+        "Dynamic Programming",
+        "Probability",
+        "Combinatorics"
+    ]
+}

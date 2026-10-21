@@ -1,0 +1,26 @@
+Problem 015 — Sliding Window Maximum
+
+You are given an integer array a of length n and an integer k.
+
+A window of exactly k consecutive elements starts at the beginning of the array and moves one position to the right at a time.
+
+For every possible window, output the maximum value contained in that window.
+
+Input
+n k
+a1 a2 ... an
+Output
+
+Print n-k+1 integers, where the i-th integer is the maximum element in the window starting at index i.
+
+Example
+Input:
+8 3
+1 3 -1 -3 5 3 6 7
+
+Output:
+3 3 5 5 6 7
+Constraints
+1 <= n <= 100000
+1 <= k <= n
+-10000 <= a[i] <= 10000

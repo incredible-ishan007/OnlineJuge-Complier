@@ -1,0 +1,13 @@
+{
+  "id": "015",
+  "title": "Sliding Window Maximum",
+  "difficulty": "Medium",
+  "tags": [
+    "Array",
+    "Queue",
+    "Sliding Window",
+    "Heap (Priority Queue)",
+    "Monotonic Queue",
+    "Range Minimum/Maximum Query"
+  ]
+}

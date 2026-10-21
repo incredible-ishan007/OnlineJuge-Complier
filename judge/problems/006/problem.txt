@@ -1,0 +1,66 @@
+006. Word Break
+
+You are given a string s and a dictionary of n distinct strings called wordDict.
+
+Determine whether s can be segmented into a sequence of one or more dictionary words.
+
+Each word from the dictionary may be used multiple times.
+
+Return 1 if the string can be completely segmented, otherwise return 0.
+
+Input
+
+The first line contains the string s.
+
+The second line contains an integer n, the number of words in the dictionary.
+
+The third line contains n space-separated strings representing the dictionary.
+
+Output
+
+Print 1 if s can be segmented completely using words from the dictionary. Otherwise, print 0.
+
+Examples
+
+Example 1
+
+leetcode
+2
+leet code
+
+Output:
+
+1
+
+Explanation: leetcode can be split as leet code.
+
+Example 2
+
+applepenapple
+2
+apple pen
+
+Output:
+
+1
+
+Explanation: applepenapple can be split as apple pen apple. The word apple is reused.
+
+Example 3
+
+catsandog
+5
+cats dog sand and cat
+
+Output:
+
+0
+
+Explanation: The string cannot be completely segmented using the given dictionary.
+
+Constraints
+1 <= |s| <= 300
+1 <= n <= 1000
+1 <= |wordDict[i]| <= 20
+s and every dictionary word contain only lowercase English letters.
+All dictionary words are distinct.

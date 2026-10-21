@@ -1,0 +1,12 @@
+{
+  "id": "016",
+  "title": "Cut Off Trees",
+  "difficulty": "Hard",
+  "tags": [
+    "Array",
+    "Breadth-First Search",
+    "Matrix",
+    "Sorting",
+    "Shortest Path"
+  ]
+}

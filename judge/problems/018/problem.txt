@@ -1,0 +1,80 @@
+018 — Next Greater Palindromic Permutation
+
+Problem Statement
+
+You are given two strings s and target of the same length.
+
+Rearrange the characters of s to form a palindrome that is strictly lexicographically greater than target.
+
+Among all such palindromes, print the lexicographically smallest one.
+
+If no valid palindrome can be formed, print -1.
+
+A palindrome reads the same from left to right and right to left.
+
+Input
+
+The input consists of two lines:
+
+s
+target
+s contains lowercase English letters.
+target contains lowercase English letters.
+Both strings have the same length.
+Output
+
+Print the lexicographically smallest palindromic permutation of s that is strictly greater than target.
+
+If no such palindrome exists, print:
+
+-1
+Examples
+
+Example 1
+
+Input:
+
+baba
+abba
+
+Output:
+
+baab
+
+Example 2
+
+Input:
+
+baba
+bbaa
+
+Output:
+
+-1
+
+Example 3
+
+Input:
+
+abc
+abb
+
+Output:
+
+-1
+
+Example 4
+
+Input:
+
+aac
+abb
+
+Output:
+
+aca
+Constraints
+1 <= |s| <= 300
+|s| = |target|
+
+Both s and target consist only of lowercase English letters.

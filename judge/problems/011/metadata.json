@@ -1,0 +1,11 @@
+{
+  "id": "011",
+  "title": "Another Stone Crisis",
+  "difficulty": "Hard",
+  "tags": [
+    "Dynamic Programming",
+    "Game Theory",
+    "Prefix Sum",
+    "Greedy"
+  ]
+}

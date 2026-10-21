@@ -1,0 +1,11 @@
+{
+    "id": "005",
+    "title": "Kth Smallest Amount With Single Denomination Combination",
+    "difficulty": "Hard",
+    "tags": [
+        "Binary Search",
+        "Math",
+        "Inclusion-Exclusion",
+        "Bitmask"
+    ]
+}

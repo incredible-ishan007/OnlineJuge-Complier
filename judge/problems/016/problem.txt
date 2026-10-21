@@ -1,0 +1,68 @@
+Problem 016 — Cut Off Trees
+
+You are given a rectangular grid representing a forest.
+
+Each cell contains an integer:
+
+0 — the cell is blocked and cannot be entered.
+1 — the cell is empty and can be walked through.
+Any value greater than 1 — the cell contains a tree whose value represents its height.
+
+You start at the cell (0, 0).
+
+Your goal is to cut down every tree in the forest.
+
+Trees must be cut in strictly increasing order of their heights. After cutting a tree, its cell becomes an empty cell (1), so you can walk through it normally.
+
+In one step, you may move up, down, left, or right to an adjacent walkable cell.
+
+For every tree, find the minimum number of steps needed to reach it from the position of the previously cut tree.
+
+Return the minimum total number of steps required to cut all trees.
+
+If any tree cannot be reached, output -1.
+
+Input
+
+The first line contains two integers n and m.
+
+The next n lines contain m integers representing the forest.
+
+n m
+a[0][0] a[0][1] ... a[0][m-1]
+a[1][0] a[1][1] ... a[1][m-1]
+...
+a[n-1][0] a[n-1][1] ... a[n-1][m-1]
+Output
+
+Print the minimum total number of steps required to cut all trees.
+
+If it is impossible to cut every tree, print:
+
+-1
+Example 1
+Input:
+3 3
+1 2 3
+0 0 4
+7 6 5
+
+Output:
+6
+Example 2
+Input:
+3 3
+1 2 3
+0 0 0
+7 6 5
+
+Output:
+-1
+Constraints
+1 <= n, m <= 50
+1 <= n * m <= 2500
+0 <= a[i][j] <= 10^9
+All tree heights (a[i][j] > 1) are distinct.
+Note
+
+The trees must always be visited in increasing order of height, regardless of their positions in the grid. The shortest path between consecutive trees should be used to minimize the total number of steps.

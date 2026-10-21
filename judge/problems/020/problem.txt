@@ -1,0 +1,32 @@
+020. Longest Happy Prefix
+
+A string is called a happy prefix if it is a non-empty prefix which is also a suffix, excluding the entire string itself.
+
+Given a string s, return the longest happy prefix of s.
+
+Return an empty string if no such prefix exists.
+
+Input Format:
+The input contains a single string s.
+
+Output Format:
+Print the longest happy prefix of s.
+If no happy prefix exists, print an empty line.
+
+Constraints:
+1 <= |s| <= 100000
+s contains only lowercase English letters.
+
+Examples:
+
+Input:
+level
+
+Output:
+l
+
+Input:
+ababab
+
+Output:
+abab

@@ -1,0 +1,11 @@
+{
+    "id": "018",
+    "title": "Next Greater Palindromic Permutation",
+    "difficulty": "Hard",
+    "tags": [
+        "String",
+        "Palindrome",
+        "Greedy",
+        "Counting"
+    ]
+}

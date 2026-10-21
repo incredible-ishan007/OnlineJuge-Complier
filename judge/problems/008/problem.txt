@@ -1,0 +1,89 @@
+008. Check Divisibility by Digit Sum and Product
+
+You are given t test cases. For each test case, you are given a positive integer n.
+
+Calculate the following two values:
+
+Digit sum: the sum of all digits of n.
+Digit product: the product of all digits of n.
+
+Determine whether n is divisible by the sum of the digit sum and digit product.
+
+Print true if n is divisible by this value; otherwise, print false.
+
+Input
+
+The first line contains an integer t — the number of test cases.
+
+Each of the next t lines contains a positive integer n.
+
+For our test files, t will always be 1.
+
+Constraints
+1 ≤ t ≤ 1
+1 ≤ n ≤ 10^6
+Output
+
+For each test case, print:
+
+true
+
+if n is divisible by the sum of its digit sum and digit product.
+
+Otherwise, print:
+
+false
+Examples
+Example 1
+
+Input
+
+1
+99
+
+Output
+
+true
+
+Explanation:
+
+Digit sum:
+
+9 + 9 = 18
+
+Digit product:
+
+9 × 9 = 81
+
+Their sum:
+
+18 + 81 = 99
+
+Since 99 is divisible by 99, the answer is true.
+
+Example 2
+
+Input
+
+1
+23
+
+Output
+
+false
+
+Explanation:
+
+Digit sum:
+
+2 + 3 = 5
+
+Digit product:
+
+2 × 3 = 6
+
+Their sum:
+
+5 + 6 = 11
+
+Since 23 is not divisible by 11, the answer is false.

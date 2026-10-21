@@ -1,0 +1,4 @@
+*.exe
+judge/output/
+judge/temp.*
+.vscode/

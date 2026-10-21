@@ -1,0 +1,10 @@
+{
+  "id": "006",
+  "title": "Word Break",
+  "difficulty": "Medium",
+  "tags": [
+    "Dynamic Programming",
+    "Trie",
+    "String"
+  ]
+}

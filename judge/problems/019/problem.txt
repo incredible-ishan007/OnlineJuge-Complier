@@ -1,0 +1,50 @@
+019. Probability of Two Boxes Having the Same Number of Distinct Balls
+
+You are given 2n balls of k distinct colors.
+
+You are given an integer array balls of size k, where balls[i] represents the number of balls of color i.
+
+All balls are shuffled uniformly at random. The first n balls are placed into the first box, and the remaining n balls are placed into the second box.
+
+The two boxes are considered different.
+
+Return the probability that the two boxes contain the same number of distinct colors.
+
+Your answer is accepted if its absolute error is at most 1e-5.
+
+Input Format:
+The first line contains an integer k.
+The second line contains k integers representing balls.
+
+Output Format:
+Print the probability that both boxes contain the same number of distinct colors.
+
+The answer may be printed as a decimal number.
+
+Constraints:
+1 <= k <= 8
+1 <= balls[i] <= 6
+The sum of all balls[i] is even.
+
+Examples:
+
+Input:
+2
+1 1
+
+Output:
+1.00000
+
+Input:
+3
+2 1 1
+
+Output:
+0.66667
+
+Input:
+4
+1 2 1 2
+
+Output:
+0.60000

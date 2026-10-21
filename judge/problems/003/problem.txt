@@ -1,0 +1,102 @@
+Problem 003 — Divisible Stone Game
+
+
+Problem Statement
+
+Alice and Bob are playing a game with a collection of stones.
+
+You are given an integer array stones, where stones[i] represents the value of the i-th stone.
+
+Alice and Bob take turns removing exactly one stone from the collection. Alice always makes the first move.
+
+The game follows this rule:
+
+On each turn, a player chooses any remaining stone and removes it.
+Keep track of the sum of the values of all stones removed so far.
+If the sum becomes divisible by 3 immediately after a player removes a stone, that player loses.
+If all stones are removed without a player losing, Bob wins automatically.
+
+Both players play optimally.
+
+Return true if Alice wins, otherwise return false.
+
+Input Format
+
+The input consists of:
+
+The first line containing an integer N, the number of stones.
+The second line containing N space-separated integers representing stones.
+Output Format
+
+Print:
+
+true
+
+if Alice wins, otherwise print:
+
+false
+Constraints
+1 ≤ N ≤ 100000
+1 ≤ stones[i] ≤ 10000
+Example 1
+
+Input
+
+2
+2 1
+
+Output
+
+true
+
+Explanation
+
+Alice can remove either stone.
+
+Suppose Alice removes 2.
+
+The current sum is 2, which is not divisible by 3.
+
+Bob removes the remaining 1.
+
+The sum becomes 3, which is divisible by 3, so Bob loses.
+
+Therefore, Alice wins.
+
+Example 2
+
+Input
+
+1
+2
+
+Output
+
+false
+
+Explanation
+
+Alice must remove the only stone.
+
+The sum is 2, which is not divisible by 3.
+
+All stones have now been removed, so Bob wins automatically.
+
+Therefore, Alice loses.
+
+Example 3
+
+Input
+
+5
+5 1 2 4 3
+
+Output
+
+false
+
+Explanation
+
+With optimal play, Bob can force Alice to eventually make the removed-stone sum divisible by 3.
+
+Therefore, Alice cannot win.

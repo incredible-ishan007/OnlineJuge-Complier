@@ -1,0 +1,68 @@
+Problem 014  Longest Border
+
+You are given a string s.
+
+A border of a string is a non-empty substring that is both a prefix and a suffix of the string, but it cannot be the entire string itself.
+
+Your task is to find the longest border of s.
+
+The prefix and suffix are allowed to overlap.
+
+If s has no valid border, output -1.
+
+Input
+
+A single line containing the string s.
+
+Output
+
+Print the longest border of s.
+
+If no such border exists, print -1.
+
+Examples
+
+Example 1
+
+Input:
+level
+
+Output:
+l
+
+Example 2
+
+Input:
+ababab
+
+Output:
+abab
+
+Example 3
+
+Input:
+abcde
+
+Output:
+-1
+
+Example 4
+
+Input:
+aaaaa
+
+Output:
+aaaa
+Constraints
+1 <= |s| <= 100000
+s contains only lowercase English letters.
+Notes
+
+For s = "ababab":
+
+Prefix:  abab
+Suffix:  abab
+
+Therefore, "abab" is a valid border and is the longest one.
+
+For s = "abcde", no non-empty proper prefix is also a suffix, so the answer is -1.

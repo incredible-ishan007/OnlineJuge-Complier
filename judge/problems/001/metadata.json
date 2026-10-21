@@ -1,0 +1,9 @@
+{
+    "id": "001",
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "tags": [
+        "Array",
+        "Hash Map"
+    ]
+}

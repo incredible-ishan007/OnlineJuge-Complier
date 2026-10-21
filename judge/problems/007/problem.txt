@@ -1,0 +1,66 @@
+007. Bermuda Rectangle
+
+The Beaver is swimming across the ocean and wants to explore the Bermuda Rectangle.
+
+The Bermuda Rectangle is a rectangle whose bottom-left corner is at (0, 0). Its area is exactly S, and both of its side lengths are positive integers.
+
+The Beaver receives q queries. In each query, a rectangle with side lengths x and y is given. This rectangle also has its bottom-left corner at (0, 0).
+
+A cell of the query rectangle is called reachable if there exists a valid Bermuda Rectangle with area exactly S that contains that cell.
+
+For every query, determine the number of reachable cells inside the x × y query rectangle.
+
+Input
+
+The first line contains an integer t — the number of test cases.
+
+For each test case:
+
+The first line contains two integers S and q — the area of the Bermuda Rectangle and the number of queries.
+
+Each of the next q lines contains two integers x and y — the side lengths of the query rectangle.
+
+Constraints
+
+1 ≤ t ≤ 10000
+1 ≤ S ≤ 10^14
+1 ≤ q ≤ 3 · 10^5
+1 ≤ x, y ≤ S
+
+The sum of q over all test cases does not exceed 3 · 10^5.
+
+The sum of √S over all test cases does not exceed 10^7.
+
+Output
+
+For each query, print a single integer — the number of cells inside the x × y query rectangle that are reachable.
+
+Print the answers in the same order as the queries, each on a separate line.
+
+Example
+
+Input
+
+3
+6 4
+2 3
+4 5
+6 6
+1 1
+5 2
+2 2
+3 4
+8 2
+3 1
+5 6
+
+Output
+
+6
+11
+14
+1
+3
+6
+3
+15

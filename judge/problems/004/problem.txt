@@ -1,0 +1,94 @@
+Problem 004 — Tree Redistribution
+Problem Statement
+
+You are given an array A containing N non-negative integers such that:
+
+i=1
+∑  Ai=N
+N
+
+
+Consider a labelled tree T containing N nodes.
+
+You may perform the following operation any number of times:
+
+Choose two distinct nodes u and v such that the distance between them is exactly 2.
+Decrease A[u] by 1.
+Increase A[v] by 1.
+
+A tree is called good if it is possible to transform the given array A into:
+
+[1, 1, ..., 1]
+
+using the allowed operation any number of times, including zero.
+
+Your task is to count the number of labelled trees that are good.
+
+Since the answer can be very large, output it modulo:
+
+998244353
+Distance
+
+dist(u, v) is the number of edges in the unique simple path between nodes u and v.
+
+Input Format
+
+The first line contains an integer T, the number of test cases.
+
+For each test case:
+
+The first line contains an integer N.
+The second line contains N integers:
+A1 A2 ... AN
+
+It is guaranteed that:
+
+∑A
+i
+	​
+
+=N
+Output Format
+
+For each test case, print the number of good labelled trees modulo 998244353.
+
+Constraints
+1 ≤ T ≤ 100
+2 ≤ N ≤ 400
+0 ≤ Ai ≤ N
+ΣAi = N
+The sum of N² over all test cases does not exceed 400².
+Example 1
+Input
+3
+4
+1 1 1 1
+3
+1 0 2
+3
+3 0 0
+Output
+16
+1
+0
+Explanation
+
+For the first test case:
+
+A = [1,1,1,1]
+
+The array already has the required form, so every labelled tree is good.
+
+There are 4^(4-2) = 16 labelled trees on 4 nodes.
+
+For the second test case:
+
+A = [1,0,2]
+
+Only one labelled tree allows the required redistribution, so the answer is 1.
+
+For the third test case:
+
+A = [3,0,0]
+
+No labelled tree allows the array to be transformed into [1,1,1], so the answer is 0.

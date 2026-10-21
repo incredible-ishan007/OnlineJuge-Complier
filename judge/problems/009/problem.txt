@@ -1,0 +1,66 @@
+009. Valid K-Unique Subarrays 
+
+You are given an integer array nums of length n and an integer k.
+
+You are also given q queries. Each query contains two integers l and r, representing the subarray nums[l..r].
+
+A subarray nums[l..r] is called valid if:
+
+It contains exactly k distinct numbers.
+The frequency of every distinct number in the subarray is even.
+
+For each query, determine whether the corresponding subarray is valid.
+
+Input
+
+The first line contains two integers n and k.
+
+The second line contains n integers:
+
+nums[0], nums[1], ..., nums[n-1]
+
+The third line contains an integer q, the number of queries.
+
+Each of the next q lines contains two integers l and r, representing the query subarray nums[l..r].
+
+Output
+
+For each query, print true if the subarray is valid, otherwise print false.
+
+Print the answers in the same order as the queries, one answer per line.
+
+Constraints
+2 <= n <= 100000
+1 <= nums[i] <= 100000
+1 <= k <= n
+1 <= q <= 100000
+0 <= l < r < n
+Example 1
+Input
+4 2
+1 2 2 1
+3
+0 1
+0 3
+1 2
+Output
+false
+true
+false
+Explanation
+[0,1] → [1,2] has 2 distinct numbers, but both occur once, so it is not valid.
+[0,3] → [1,2,2,1] has exactly 2 distinct numbers, and both occur twice, so it is valid.
+[1,2] → [2,2] has only 1 distinct number, so it is not valid.
+Example 2
+Input
+3 1
+3 3 3
+2
+1 2
+0 2
+Output
+true
+false
+Explanation
+[1,2] → [3,3] contains exactly 1 distinct number and its frequency is 2, so it is valid.
+[0,2] → [3,3,3] contains exactly 1 distinct number, but its frequency is 3, which is odd, so it is not valid.

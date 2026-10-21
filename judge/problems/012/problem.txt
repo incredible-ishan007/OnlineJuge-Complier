@@ -1,0 +1,61 @@
+012. Merge Two Sorted Lists
+
+You are given two sorted lists.
+
+The first list contains n integers and the second list contains m integers. Both lists are sorted in non-decreasing order.
+
+Merge the two lists into one sorted list containing all elements from both lists.
+
+Input
+
+The first line contains two integers n and m (0 ≤ n, m ≤ 50).
+
+The next n integers represent the first sorted list.
+
+The next m integers represent the second sorted list.
+
+If n = 0, there are no integers belonging to the first list.
+
+If m = 0, there are no integers belonging to the second list.
+
+Each element satisfies:
+
+-100 ≤ ai ≤ 100
+
+Output
+
+Print all elements of the merged list in non-decreasing order, separated by spaces.
+
+If both lists are empty, print -1.
+
+Examples
+Example 1
+
+Input
+
+3 3
+1 2 4
+1 3 4
+
+Output
+
+1 1 2 3 4 4
+Example 2
+
+Input
+
+0 0
+
+Output
+
+-1
+Example 3
+
+Input
+
+0 1
+0
+
+Output
+
+0

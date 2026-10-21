@@ -1,0 +1,10 @@
+{
+  "id": "010",
+  "title": "Count of Smaller Numbers After Self",
+  "difficulty": "Medium",
+  "tags": [
+    "Fenwick Tree",
+    "Segment Tree",
+    "Divide and Conquer"
+  ]
+}
