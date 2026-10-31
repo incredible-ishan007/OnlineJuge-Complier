@@ -1,0 +1,593 @@
+[
+  {
+    "submissionId": "eb4fcd20-e31f-48af-a18b-bd858e7078e6",
+    "userId": "6ae4ffbcb0a2cdf4f63d4adc",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "TIME_LIMIT_EXCEEDED",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    while(1)cout<<1<<endl;\n    return 0;\n}",
+    "duration": 3.28,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "TIME_LIMIT_EXCEEDED"
+      }
+    ],
+    "passed": 0,
+    "total": 1,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: TIME_LIMIT_EXCEEDED\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T16:44:18.195Z"
+  },
+  {
+    "submissionId": "f4c23ad2-21f7-4d6a-87d4-3a834a72d902",
+    "userId": "6ae4ffbcb0a2cdf4f63d4adc",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "WA",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout<<1<<endl;\n    return 0;\n}",
+    "duration": 1.27,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "WA"
+      }
+    ],
+    "passed": 0,
+    "total": 1,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: WA\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T16:43:30.228Z"
+  },
+  {
+    "submissionId": "58ec2562-9318-4120-a29b-6c2293e3c827",
+    "userId": "6ae4ffbcb0a2cdf4f63d4adc",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "COMPILATION_ERROR",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout<<1<<end;\n    return 0;\n}",
+    "duration": 2.27,
+    "testCases": [],
+    "passed": 0,
+    "total": 0,
+    "output": "Compiling...\r\nCOMPILATION_ERROR\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T16:43:22.360Z"
+  },
+  {
+    "submissionId": "a9636fb8-7023-4ed5-8910-64f01f604557",
+    "userId": "6ae4ff6ab0a2cdf4f63d4adb",
+    "problemId": "002",
+    "problemTitle": "Modify and Subtract",
+    "verdict": "ACCEPTED",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while(t--)\n    {\n        int n;\n        cin >> n;\n\n        vector<long long> a(n + 1);\n\n        for(int i = 1; i <= n; i++)\n            cin >> a[i];\n\n        vector<bool> leftOk(n + 1, false);\n        vector<bool> rightOk(n + 1, false);\n\n        vector<long long> left(n + 1, 0);\n        vector<long long> right(n + 1, 0);\n\n        leftOk[1] = true;\n        left[1] = a[1];\n\n        for(int i = 2; i < n; i++)\n        {\n            left[i] = a[i] - left[i - 1];\n\n            leftOk[i] = leftOk[i - 1] && left[i] >= 0;\n        }\n\n        rightOk[n] = true;\n        right[n] = a[n];\n\n        for(int i = n - 1; i >= 2; i--)\n        {\n            right[i] = a[i] - right[i + 1];\n\n            rightOk[i] = rightOk[i + 1] && right[i] >= 0;\n        }\n\n        int ans = 0;\n\n        for(int i = 1; i <= n; i++)\n        {\n            bool validLeft = (i == 1 || leftOk[i - 1]);\n            bool validRight = (i == n || rightOk[i + 1]);\n\n            if(validLeft && validRight)\n                ans++;\n        }\n\n        cout << ans << '\\n';\n    }\n\n    return 0;\n}",
+    "duration": 12.35,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 2,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 3,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 4,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 5,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 6,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 7,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 8,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 9,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 10,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 11,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 12,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 13,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 14,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 15,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 16,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 17,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 18,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 19,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 20,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 21,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 22,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 23,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 24,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 25,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 26,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 27,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 28,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 29,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 30,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 31,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 32,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 33,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 34,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 35,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 36,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 37,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 38,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 39,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 40,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 41,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 42,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 43,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 44,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 45,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 46,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 47,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 48,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 49,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 50,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 51,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 52,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 53,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 54,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 55,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 56,
+        "verdict": "AC"
+      }
+    ],
+    "passed": 56,
+    "total": 56,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: AC\r\nTest 2: AC\r\nTest 3: AC\r\nTest 4: AC\r\nTest 5: AC\r\nTest 6: AC\r\nTest 7: AC\r\nTest 8: AC\r\nTest 9: AC\r\nTest 10: AC\r\nTest 11: AC\r\nTest 12: AC\r\nTest 13: AC\r\nTest 14: AC\r\nTest 15: AC\r\nTest 16: AC\r\nTest 17: AC\r\nTest 18: AC\r\nTest 19: AC\r\nTest 20: AC\r\nTest 21: AC\r\nTest 22: AC\r\nTest 23: AC\r\nTest 24: AC\r\nTest 25: AC\r\nTest 26: AC\r\nTest 27: AC\r\nTest 28: AC\r\nTest 29: AC\r\nTest 30: AC\r\nTest 31: AC\r\nTest 32: AC\r\nTest 33: AC\r\nTest 34: AC\r\nTest 35: AC\r\nTest 36: AC\r\nTest 37: AC\r\nTest 38: AC\r\nTest 39: AC\r\nTest 40: AC\r\nTest 41: AC\r\nTest 42: AC\r\nTest 43: AC\r\nTest 44: AC\r\nTest 45: AC\r\nTest 46: AC\r\nTest 47: AC\r\nTest 48: AC\r\nTest 49: AC\r\nTest 50: AC\r\nTest 51: AC\r\nTest 52: AC\r\nTest 53: AC\r\nTest 54: AC\r\nTest 55: AC\r\nTest 56: AC\r\n\r\nACCEPTED\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T16:31:42.478Z"
+  },
+  {
+    "submissionId": "165f617c-bae0-4ba6-983d-6d19f176362c",
+    "userId": "6ae4ff6ab0a2cdf4f63d4adb",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "WA",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout<<1<<endl;\n    return 0;\n}",
+    "duration": 9.58,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "WA"
+      }
+    ],
+    "passed": 0,
+    "total": 1,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: WA\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T16:03:32.887Z"
+  },
+  {
+    "submissionId": "b2d07e30-b7df-4df0-aa61-c5c96c29fad0",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "ACCEPTED",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main()\n{\n    int n;\n    long long target;\n    cin >> n >> target;\n\n    vector<long long> a(n);\n\n    for (int i = 0; i < n; i++)\n        cin >> a[i];\n\n    unordered_map<long long, int> mp;\n\n    for (int i = 0; i < n; i++)\n    {\n        long long need = target - a[i];\n\n        if (mp.count(need))\n        {\n            cout << mp[need] << \" \" << i << '\\n';\n            return 0;\n        }\n\n        mp[a[i]] = i;\n    }\n\n    return 0;\n}",
+    "duration": 13.13,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 2,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 3,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 4,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 5,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 6,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 7,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 8,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 9,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 10,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 11,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 12,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 13,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 14,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 15,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 16,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 17,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 18,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 19,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 20,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 21,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 22,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 23,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 24,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 25,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 26,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 27,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 28,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 29,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 30,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 31,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 32,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 33,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 34,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 35,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 36,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 37,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 38,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 39,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 40,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 41,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 42,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 43,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 44,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 45,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 46,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 47,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 48,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 49,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 50,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 51,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 52,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 53,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 54,
+        "verdict": "AC"
+      },
+      {
+        "testNumber": 55,
+        "verdict": "AC"
+      }
+    ],
+    "passed": 55,
+    "total": 55,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: AC\r\nTest 2: AC\r\nTest 3: AC\r\nTest 4: AC\r\nTest 5: AC\r\nTest 6: AC\r\nTest 7: AC\r\nTest 8: AC\r\nTest 9: AC\r\nTest 10: AC\r\nTest 11: AC\r\nTest 12: AC\r\nTest 13: AC\r\nTest 14: AC\r\nTest 15: AC\r\nTest 16: AC\r\nTest 17: AC\r\nTest 18: AC\r\nTest 19: AC\r\nTest 20: AC\r\nTest 21: AC\r\nTest 22: AC\r\nTest 23: AC\r\nTest 24: AC\r\nTest 25: AC\r\nTest 26: AC\r\nTest 27: AC\r\nTest 28: AC\r\nTest 29: AC\r\nTest 30: AC\r\nTest 31: AC\r\nTest 32: AC\r\nTest 33: AC\r\nTest 34: AC\r\nTest 35: AC\r\nTest 36: AC\r\nTest 37: AC\r\nTest 38: AC\r\nTest 39: AC\r\nTest 40: AC\r\nTest 41: AC\r\nTest 42: AC\r\nTest 43: AC\r\nTest 44: AC\r\nTest 45: AC\r\nTest 46: AC\r\nTest 47: AC\r\nTest 48: AC\r\nTest 49: AC\r\nTest 50: AC\r\nTest 51: AC\r\nTest 52: AC\r\nTest 53: AC\r\nTest 54: AC\r\nTest 55: AC\r\n\r\nACCEPTED\r\n",
+    "errors": "",
+    "timestamp": "2026-10-31T11:23:43.143Z"
+  },
+  {
+    "submissionId": "db0a28bd-d3a0-4b5e-b349-ec021aa0cc65",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "COMPILATION_ERROR",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout<<\"YES\"<<endl;\n    cout<<a<<emdl;;\n    return 0;\n}",
+    "duration": 1.29,
+    "testCases": [],
+    "passed": 0,
+    "total": 0,
+    "output": "Compiling...\r\nCOMPILATION_ERROR\r\n",
+    "errors": "",
+    "timestamp": "2026-10-30T19:38:18.999Z"
+  },
+  {
+    "submissionId": "c1a06683-e2f1-4ddf-90b0-954bd958d692",
+    "problemId": "001",
+    "problemTitle": "Two Sum",
+    "verdict": "WA",
+    "language": "C++17",
+    "code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout<<\"YES\"<<endl;\n    return 0;\n}",
+    "duration": 2.52,
+    "testCases": [
+      {
+        "testNumber": 1,
+        "verdict": "WA"
+      }
+    ],
+    "passed": 0,
+    "total": 1,
+    "output": "Compiling...\r\nCompilation successful.\r\n\r\nTest 1: WA\r\n",
+    "errors": "",
+    "timestamp": "2026-10-30T19:37:13.238Z"
+  }
+]

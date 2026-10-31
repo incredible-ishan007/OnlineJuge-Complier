@@ -1,4 +1,23 @@
+# Node dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+
+# IDE files
+.vscode/
+
+# Judge generated files
 *.exe
 judge/output/
 judge/temp.*
-.vscode/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*

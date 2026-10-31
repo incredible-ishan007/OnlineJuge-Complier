@@ -1,100 +1,32 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
-public:
-
-    vector<int> seg;
-    int padding = 10000;
-
-    int query(int node, int l, int r, int current) {
-
-        if(current <= l)
-            return 0;
-
-        if(current > r)
-            return seg[node];
-
-        int mid = l + (r - l) / 2;
-
-        return query(2 * node, l, mid, current) +
-               query(2 * node + 1, mid + 1, r, current);
-    }
-
-    void update(int node, int l, int r, int current) {
-
-        if(l == r) {
-            seg[node]++;
-            return;
-        }
-
-        seg[node]++;
-
-        int mid = l + (r - l) / 2;
-
-        if(current <= mid)
-            update(2 * node, l, mid, current);
-        else
-            update(2 * node + 1, mid + 1, r, current);
-    }
-
-    vector<int> countSmaller(vector<int>& nums) {
-
-        int n = nums.size();
-
-        vector<int> ans(n);
-
-        seg.assign(4 * 20001 + 5, 0);
-
-        for(int i = n - 1; i >= 0; i--) {
-
-            int curr = nums[i] + padding;
-
-            ans[i] = query(
-                1,
-                0,
-                20000,
-                curr
-            );
-
-            update(
-                1,
-                0,
-                20000,
-                curr
-            );
-        }
-
-        return ans;
-    }
-};
-
 int main() {
-
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int n;
-    cin >> n;
+    long long target;
+    cin >> n >> target;
 
-    vector<int> nums(n);
+    vector<long long> a(n);
+    unordered_map<long long, int> mp;
 
-    for(int i = 0; i < n; i++)
-        cin >> nums[i];
-
-    Solution sol;
-
-    vector<int> ans = sol.countSmaller(nums);
-
-    for(int i = 0; i < n; i++) {
-
-        if(i)
-            cout << ' ';
-
-        cout << ans[i];
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
     }
 
-    cout << '\n';
+    for (int i = 0; i < n; i++) {
+        long long need = target - a[i];
+
+        if (mp.find(need) != mp.end()) {
+            cout << mp[need] << " " << i << '\n';
+            return 0;
+        }
+
+        mp[a[i]] = i;
+    }
 
     return 0;
 }
